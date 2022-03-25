@@ -1,23 +1,24 @@
+from colorama import Fore
 
 game_word = 'carlo'
 game_word = list(game_word)
 print(game_word)
 
 while True:
-    guess = list(input('Guess: '))
-    print(f'your guess was {guess}')
+    guess = list(input(Fore.LIGHTWHITE_EX + 'Guess: '))
+    print(Fore.LIGHTWHITE_EX + f'your guess was {guess}')
 
     if guess == game_word:
-        print('correct')
+        print(Fore.LIGHTGREEN_EX + 'correct word')
         break
-    else: print('still wrong word')
+    else: print(Fore.LIGHTWHITE_EX + 'still wrong word')
 
     for i in range(len(guess)):
         if guess[i] == game_word[i]:
-            print(f'correct letter {guess[i]} and position')
+            print(Fore.LIGHTGREEN_EX + guess[i])
         elif guess[i] in game_word:
-            print(f'correct letter {guess[i]}')
-        else: print(f'wrong letter {guess[i]}')
+            print(Fore.YELLOW + guess[i])
+        else: print(Fore.RED + guess[i])
 
 
 

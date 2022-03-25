@@ -1,4 +1,6 @@
 from urllib.request import urlopen
+import colorama
+from colorama import Fore
 import random
 
 local_name = "Wordle_words"
